@@ -1,1 +1,79 @@
-/* Add any styling you want */
+/* Colors and fonts */
+
+
+body {
+	font-family: 'Nanum Gothic', sans-serif;
+	background-image: url(bg.png);
+}
+
+h1 {
+	font-family: 'Shadows Into Light', cursive;
+	font-size: 50px;
+	color: #464159;
+}
+
+h2 {
+	color: #8bbabb;
+}
+
+p {
+	color: #6c7b95;
+	text-align: justify;
+}
+
+a {
+	color: #c7f0db;
+}
+
+/* Class */
+
+.container {
+	width: 800px;
+	margin: 0px auto;
+	text-align: center;
+}
+
+.card-white {
+	background: white;   
+	margin: 30px auto;      
+	padding: 30px;                           
+	border-radius: 4px;                   
+	box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+.img-circle {
+  	border-radius: 50%;
+ 	 width: 150px;
+ 	 height: 150px;
+  	margin: 0px auto;
+ }
+
+ .citation {
+ 	text-align: center;
+ 	font-style: italic;
+ }
+
+ .social-icon {
+ 	width: 20px;
+  	height: 20px;
+ }
+
+ /* Screens */
+ @media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
