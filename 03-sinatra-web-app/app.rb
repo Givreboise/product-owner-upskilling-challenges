@@ -11,7 +11,8 @@ get "/" do
       "city" => "Nantes",
       "duration" => 60,
       "maxpax" => 4,
-      "price" => 120
+      "price" => 120,
+      "img" => "https://images.unsplash.com/photo-1548412576-d92cb3275e23?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
 
       },
 

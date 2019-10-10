@@ -3,23 +3,42 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style> @import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/319bcd1342.js" crossorigin="anonymous"></script>
     <title>Team Building - Activities</title>
     <%= stylesheet '/style.css' %>
+    <%= stylesheet '/components/banner.css' %>
+    <%= stylesheet '/components/container.css' %>
+    <%= stylesheet '/components/card.css' %>
   </head>
   <body>
-    <h1>Activities</h1>
-
-
-    <% @activities.each do |activity| %>
-    <div class="card-white">
-    <p><%= activity["name"] %> <%= activity["category"] %></p>
-    <p>Located in <%= activity["city"]%>
-    <p>Duration of <%= activity["duration"] %> minutes </p>
-    <p> For <%= activity["maxpax"]%> participants </p>
-    <p> Charged <%= activity["price"]%> €</p>
+  <!--Banner-->
+    <div class="banner">
+      <div class="container">
+        <h1>Team Building Activities</h1>
+        <h2>Find your next adventure and onboard your team</h2>
+      </div>
     </div>
-    <% end %>
-
-  </body>
+  <!--Cartes-->
+             <% @activities.each do |activity| %>
+        <div class="card">
+        <div class="card-header">
+          <h1><%= activity["name"] %></h1>
+            <h2 class="category"> <%= activity["category"] %></h2>
+          </div>
+            <img class="img" src="<%= activity["img"]%>">
+              <div class="city-price-line">
+                <p class="city">Located in <%= activity["city"]%>
+                <p class="price"><%= activity["price"]%> €</p>
+              </div>
+              <div class="info-cta">
+              <div class="duration-participants">
+                <p class="duration"><i class="fas fa-hourglass-half"></i> <%= activity["duration"] %> min </p>
+                <p><i class="fas fa-hourglass-half"></i> <%= activity["maxpax"]%> max </p>
+              </div>
+                <p class="button"> Discover </p>
+              </div>
+         </div>
+        <% end %>
+       </body>
 </html>

@@ -1,27 +1,9 @@
-/* Add any styling you want */
-
-/* Colors and fonts */
-
-
-/* Class */
-
-.container {
-	width: 800px;
-	margin: 0px auto;
-	text-align: center;
+/* General style rules for fonts and colors */
+body, p {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0px;
 }
 
-.card-white {
-	background: white;
-	margin: 30px auto;
-	padding: 30px;
-	border-radius: 4px;
-	box-shadow: 0 10px 30px rgba(0,0,0,.1);
+a {
+  text-decoration: none;
 }
-
-.img-circle {
-  	border-radius: 50%;
- 	 width: 150px;
- 	 height: 150px;
-  	margin: 0px auto;
- }
