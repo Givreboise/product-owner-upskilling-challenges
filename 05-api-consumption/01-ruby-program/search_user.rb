@@ -8,7 +8,6 @@ first_name, last_name = name.split
 puts "Ok got it! Let's search for that person..."
 
 url = "https://wagon.ilucca-demo.net/api/v3/users"
-headers = { }
 response = RestClient.get(url, "params" => {"fields" => "lastName,firstName,department,jobtitle", "firstName" => first_name,  "lastName"=> last_name}, "Authorization" => "Lucca application=18afcfb8-697b-4742-b726-418269485cee")
 users = JSON.parse(response.body)
 
