@@ -21,7 +21,8 @@ get "/" do
       "city" => "Paris",
       "duration" => 90,
       "maxpax" => 15,
-      "price" => 300
+      "price" => 300,
+      "img" => "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
 
       },
 
@@ -30,7 +31,8 @@ get "/" do
       "city" => "Lille",
       "duration" => 120,
       "maxpax" => 10,
-      "price" => 80
+      "price" => 80,
+      "img" => "https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1003&q=80"
 
       }
     ]
