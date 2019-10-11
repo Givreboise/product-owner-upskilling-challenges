@@ -6,4 +6,9 @@ role = gets.chomp # asks user to type something in the Terminal
 
 puts "Ok got it! Let's search for the users..."
 
-# TODO: your code goes here
+url = "https://wagon.ilucca-demo.net/api/v3/users"
+headers = { "Authorization" => "Lucca application=18afcfb8-697b-4742-b726-418269485cee"}
+response = RestClient.get(url, headers)
+user = JSON.parse(response.body)
+
+p user
