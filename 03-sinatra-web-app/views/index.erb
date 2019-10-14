@@ -27,9 +27,10 @@
                   <h1><%= activity["name"] %></h1>
                   <h2 class="category"> <%= activity["category"] %></h2>
                 </div>
-              <img class="img" src="<%= activity["img"]%>">
+              <!-- <img class="img" src="<%= activity["img"]%>"> -->
+              <div class="img" style="background-image: url('<%= activity["img"]%>')"></div>
                   <div class="city-price-line">
-                    <p class="city">Located in <%= activity["city"]%>
+                    <p class="city"><%= activity["city"]%>
                     <p class="price"><%= activity["price"]%> €</p>
                   </div>
                       <div class="duration-cta">
@@ -37,10 +38,12 @@
                           <p><i class="fas fa-hourglass-half"></i>   <%= activity["duration"] %> min </p>
                           <p><i class="fas fa-users"></i> <%= activity["maxpax"]%> max </p>
                         </div>
+                        <div>
                       <p class="button"> Discover </p>
                       </div>
+                      </div>
           </div>
-      </div>
       <% end %>
+      </div>
       </body>
 </html>
