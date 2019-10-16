@@ -23,10 +23,27 @@
       <div class="cards-grid">
         <% @activities.each do |activity| %>
           <div class="card">
+                <!-- Card header with name and category-->
                 <div class="card-header">
                   <h1><%= activity["name"] %></h1>
                   <h2 class="category"> <%= activity["category"] %></h2>
                 </div>
+                <!-- Image -->
+              <div class="img" style="background-image: url('<%= activity["photo_url"]%>')"></div>
+                <!--Location, Price and Button-->
+                  <div class="city-price-line">
+                    <p class="city"><%= activity["city"]%>
+                    <p class="price"><%= activity["price"]%> €</p>
+                  </div>
+                      <div class="duration-cta">
+                        <div class="duration-participants">
+                          <p><i class="fas fa-hourglass-half"></i>   <%= activity["duration"] %> min </p>
+                          <p><i class="fas fa-users"></i> <%= activity["participants_count"]%> max </p>
+                        </div>
+                        <div>
+                      <p class="button"> Discover </p>
+                      </div>
+                      </div>
           </div>
       <% end %>
       </div>

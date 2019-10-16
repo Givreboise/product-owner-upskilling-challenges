@@ -1,0 +1,72 @@
+/* Grid structure */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+
+.card {
+	background: white;
+	border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 350px;
+  margin: 10px;
+}
+
+/* Card Header */
+
+.card-header {
+  padding: 20px 20px 20px 20px;
+  position: relative;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #204969;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.category{
+  position: absolute;
+  border: 3px;
+  border-color: #204969;
+  padding:3px 3px;
+  background-color: #204969;;
+  color: white;
+}
+
+/* Card Image */
+
+.img {
+  width: 350px;
+  height: 200px;
+  margin: 0px auto;
+  background-size: cover;
+  background-position : center;
+}
+
+/* Card detailed description */
+
+.city-price-line, .duration-cta {
+  display:flex;
+  align-items: left;
+  justify-content: space-between;
+	padding: 20px;
+}
+
+.city {
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.price {
+  font-size: 25px;
+  text-align: right;
+}
