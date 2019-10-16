@@ -8,7 +8,14 @@ require "sinatra/reloader" if development?
 enable :static
 
 get "/" do
-  @activities = # TODO: retrieve all the activities from the API
+  url = "https://team-building-api.cleverapps.io/v2/activities"
+  response = RestClient.get(url)
+  payload = JSON.parse(response.body)
+
+  @activities = payload["activities"]
+  # puts "*" * 70
+  # p @activities
+  # puts "*" * 70
 
   erb :index
 end
