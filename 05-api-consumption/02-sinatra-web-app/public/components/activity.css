@@ -1,0 +1,67 @@
+/* Card Header */
+
+.card-header-activity {
+  position: relative;
+  background: white;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #204969;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+.category-activity{
+  position: absolute;
+  border: 3px;
+  border-color: #204969;
+  padding:3px 3px;
+  background-color: #204969;;
+  color: white;
+}
+
+
+
+
+
+
+
+.img_activity {
+  background-size: cover;
+  background-position : center;
+  padding: 150px;
+  opacity: 0.8;
+  color: white;
+  position: relative;
+}
+
+.card_activity {
+    background-color: : white;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 600px;
+    margin: 10px;
+    position : center;
+}
+
+
+
+
+
+/* Card Image */
+
+.img {
+  width: 350px;
+  height: 200px;
+  margin: 0px auto;
+  background-size: cover;
+  background-position : center;
+}

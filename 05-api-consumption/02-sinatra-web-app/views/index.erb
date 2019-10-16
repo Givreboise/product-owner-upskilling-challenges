@@ -12,16 +12,22 @@
     <%= stylesheet '/components/card.css' %>
   </head>
   <body>
-  <!--Banner-->
+    <!--Banner-->
     <div class="banner">
       <div class="container">
         <h1>Team Building Activities</h1>
         <h2>Find your next adventure and onboard your team</h2>
       </div>
     </div>
-  <!--Cartes-->
-      <div class="cards-grid">
-        <% @activities.each do |activity| %>
+    <!--Cities filters-->
+    <div class="filters">
+      <a class="button" href="/"> All </a>
+      <a class="button" href="/?location=Nantes"> Nantes </a>
+      <a class="button" href="/?location=Paris"> Paris </a>
+    </div>
+    <!--Cartes-->
+    <div class="cards-grid">
+      <% @activities.each do |activity| %>
           <div class="card">
                 <!-- Card header with name and category-->
                 <div class="card-header">
@@ -41,11 +47,11 @@
                           <p><i class="fas fa-users"></i> <%= activity["participants_count"]%> max </p>
                         </div>
                         <div>
-                      <p class="button"> Discover </p>
+                      <a class="button" href="/activities/<%=activity["id"]%>"> Discover </a>
                       </div>
                       </div>
           </div>
       <% end %>
-      </div>
-      </body>
+    </div>
+  </body>
 </html>

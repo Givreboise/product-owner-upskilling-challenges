@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style> @import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/319bcd1342.js" crossorigin="anonymous"></script>
+    <title>Team Building - Activities</title>
+    <%= stylesheet '/style.css' %>
+    <%= stylesheet '/components/banner.css' %>
+    <%= stylesheet '/components/container.css' %>
+    <%= stylesheet '/components/card.css' %>
+    <%= stylesheet '/components/activity.css'%>
+  </head>
+  <body>
+  <!-- Card header with name and category -->
+    <div class="card-header-activity">
+      <h1><%= @activity["name"] %></h1>
+      <h2 class="category-activity"> <%= @activity["category"] %></h2>
+    </div>
+  <!-- Img
+    <div class="img_activity" style="background-image: url('<%= @activity["photo_url"]%>')">
+  Activity details
+          <div class="card_activity">
+              Card header with name and category
+                <div class="card-header">
+                  <h1><%= @activity["name"] %></h1>
+                  <h2 class="category"> <%= @activity["category"] %></h2>
+                </div>
+                      Location, Price and Button-
+                      <div class="city-price-line">
+                          <p class="city"><%= @activity["city"]%>
+                          <p class="price"><%= @activity["price"]%> €</p>
+                      </div>
+                     <div class="duration-cta">
+                        <div class="duration-participants">
+                          <p><i class="fas fa-hourglass-half"></i>   <%= @activity["duration"] %> min </p>
+                          <p><i class="fas fa-users"></i> <%= @activity["participants_count"]%> max </p>
+                        </div>
+                        <div>
+                           <a class="button" href="/activities/<%=@activity["id"]%>"> Discover </a>
+                        </div>
+                     </div>
+
+          </div>
+    </div>-->
+  </body>
+</html>

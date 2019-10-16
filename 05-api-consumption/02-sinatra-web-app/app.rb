@@ -9,18 +9,20 @@ enable :static
 
 get "/" do
   url = "https://team-building-api.cleverapps.io/v2/activities"
-  response = RestClient.get(url)
+  response = RestClient.get(url, "params" => {"city" => params["location"]})
   payload = JSON.parse(response.body)
 
   @activities = payload["activities"]
-  # puts "*" * 70
-  # p @activities
-  # puts "*" * 70
-
-  @activities.each do |activity|
-    puts "#{activity["name"]}" "#{activity["category"]}"
-    puts "---"
-  end
+  @location = params["location"]
 
   erb :index
+end
+
+get '/activities/:id' do
+  url = "https://team-building-api.cleverapps.io/v2/activities/#{params["id"]}"
+  response = RestClient.get(url)
+  payload = JSON.parse(response.body)
+
+  @activity = payload["activity"]
+  erb :activity
 end
