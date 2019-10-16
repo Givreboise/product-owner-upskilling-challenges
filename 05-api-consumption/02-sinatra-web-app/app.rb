@@ -17,5 +17,10 @@ get "/" do
   # p @activities
   # puts "*" * 70
 
+  @activities.each do |activity|
+    puts "#{activity["name"]}" "#{activity["category"]}"
+    puts "---"
+  end
+
   erb :index
 end
