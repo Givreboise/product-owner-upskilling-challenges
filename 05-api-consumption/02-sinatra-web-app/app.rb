@@ -9,7 +9,7 @@ enable :static
 
 get "/" do
   url = "https://team-building-api.cleverapps.io/v2/activities"
-  response = RestClient.get(url, "params" => {"city" => params["location"]})
+  response = RestClient.get(url, "params" => {"city" => params["location"], "search" => params["name"]})
   payload = JSON.parse(response.body)
 
   @activities = payload["activities"]

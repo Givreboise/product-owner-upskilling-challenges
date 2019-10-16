@@ -39,6 +39,7 @@ h2 {
   padding:3px 3px;
   background-color: #204969;;
   color: white;
+  z-index: 3;
 }
 
 /* Card Image */
@@ -57,7 +58,8 @@ h2 {
   display:flex;
   align-items: left;
   justify-content: space-between;
-	padding: 20px;
+  padding: 20px;
+
 }
 
 .city {

@@ -13,36 +13,35 @@
     <%= stylesheet '/components/activity.css'%>
   </head>
   <body>
-  <!-- Card header with name and category -->
-    <div class="card-header-activity">
-      <h1><%= @activity["name"] %></h1>
-      <h2 class="category-activity"> <%= @activity["category"] %></h2>
-    </div>
-  <!-- Img
-    <div class="img_activity" style="background-image: url('<%= @activity["photo_url"]%>')">
-  Activity details
-          <div class="card_activity">
-              Card header with name and category
-                <div class="card-header">
-                  <h1><%= @activity["name"] %></h1>
-                  <h2 class="category"> <%= @activity["category"] %></h2>
-                </div>
-                      Location, Price and Button-
-                      <div class="city-price-line">
-                          <p class="city"><%= @activity["city"]%>
-                          <p class="price"><%= @activity["price"]%> €</p>
-                      </div>
-                     <div class="duration-cta">
-                        <div class="duration-participants">
-                          <p><i class="fas fa-hourglass-half"></i>   <%= @activity["duration"] %> min </p>
-                          <p><i class="fas fa-users"></i> <%= @activity["participants_count"]%> max </p>
-                        </div>
-                        <div>
-                           <a class="button" href="/activities/<%=@activity["id"]%>"> Discover </a>
-                        </div>
-                     </div>
+         <!--Go back button-->
 
+    <div class="card-activity">
+    <a class="button-activity-header" href="/"> Go back to all activities </a>
+      <!-- Card header with name and category-->
+      <div class="card-header-activity">
+        <h1><%= @activity["name"] %></h1>
+        <h2 class="category"> <%= @activity["category"] %></h2>
+      </div>
+      <!-- Image -->
+      <div class="img-activity" style="background-image: url('<%= @activity["photo_url"]%>')">
+        <!--Location, Price and Button-->
+        <div class="container-details-activity">
+          <div class="wrapped-details-activity">
+            <div class="city-price-line">
+              <p class="city"><%= @activity["city"]%>
+              <p class="price"><%= @activity["price"]%> €</p>
+            </div>
+            <div class="duration-cta">
+              <div class="duration-participants">
+                <p><i class="fas fa-hourglass-half"></i>   <%= @activity["duration"] %> min </p>
+                <p><i class="fas fa-users"></i> <%= @activity["participants_count"]%> max </p>
+            </div>
+            <div>
+              <a class="button" href="/activities/<%=@activity["id"]%>"> Discover </a>
+            </div>
           </div>
-    </div>-->
+        </div>
+      </div>
+    </div>
   </body>
 </html>

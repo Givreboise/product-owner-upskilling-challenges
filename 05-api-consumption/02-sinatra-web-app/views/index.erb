@@ -10,6 +10,7 @@
     <%= stylesheet '/components/banner.css' %>
     <%= stylesheet '/components/container.css' %>
     <%= stylesheet '/components/card.css' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
     <!--Banner-->
@@ -19,12 +20,20 @@
         <h2>Find your next adventure and onboard your team</h2>
       </div>
     </div>
+    <!--Search-->
+        <div>
+          <form method="GET" action="/">
+            <input type="text" name="name">
+            <i class="fa fa-search"></i>
+          </form>
+        </div>
     <!--Cities filters-->
     <div class="filters">
       <a class="button" href="/"> All </a>
       <a class="button" href="/?location=Nantes"> Nantes </a>
       <a class="button" href="/?location=Paris"> Paris </a>
     </div>
+    <p><%= @activities.size %> Activities found</p>
     <!--Cartes-->
     <div class="cards-grid">
       <% @activities.each do |activity| %>

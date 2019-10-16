@@ -1,67 +1,58 @@
-/* Card Header */
+.card-activity {
+	background: white;
+	border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
 
 .card-header-activity {
+  padding: 20px 20px 20px 20px;
   position: relative;
   background: white;
-  width: auto;
+	border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 2;
+
+}
+
+.container-details-activity {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -70px;
+}
+
+.wrapped-details-activity {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 350px;
   margin: 10px;
-  text-align: center;
-  padding-top: 5px;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: bold;
-  color: #204969;
+  font-size: 30px;
 }
-
-h2 {
-  font-size: 14px;
-}
-
-.category-activity{
-  position: absolute;
-  border: 3px;
-  border-color: #204969;
-  padding:3px 3px;
-  background-color: #204969;;
-  color: white;
-}
-
-
-
-
-
-
-
-.img_activity {
-  background-size: cover;
-  background-position : center;
-  padding: 150px;
-  opacity: 0.8;
-  color: white;
-  position: relative;
-}
-
-.card_activity {
-    background-color: : white;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    width: 600px;
-    margin: 10px;
-    position : center;
-}
-
-
-
-
 
 /* Card Image */
 
-.img {
-  width: 350px;
-  height: 200px;
+.img-activity {
+  width: 100%x;
+  height: 350px;
   margin: 0px auto;
   background-size: cover;
   background-position : center;
+  position: relative;
+  z-index: 1;
+}
+
+.button-activity-header {
+  background-color: rgb(255, 255, 255); /* Green */
+  color:#08ffc8;
+  border: 1px solid #08ffc8;
+  padding: 14px 31px;
+  font-weight: bold;
 }
