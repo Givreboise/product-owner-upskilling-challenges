@@ -17,7 +17,40 @@ get "/" do
 end
 
 namespace "/v1" do
-  # TODO: your code goes here
+  get "/activities" do
+    activities = DB.execute("SELECT * FROM activities ORDER BY name")
+    json "activities" => activities
+  end
+
+  get "/activities/:id" do
+    activities = DB.execute("SELECT * FROM activities WHERE id = #{params["id"]};")
+    json "activities" => activities
+  end
+
+end
+
+namespace "/v2" do
+  get "/activities" do
+
+    if params["city"] != nil
+      activities = DB.execute("SELECT * FROM activities WHERE city = '#{params["city"]}';")
+      json "activities" => activities
+
+    elsif params["category"] != nil
+      activities = DB.execute("SELECT * FROM activities WHERE category = '#{params["category"]}';")
+      json "activities" => activities
+
+    elsif params["search"] != nil
+      activities = DB.execute("SELECT * FROM activities WHERE name LIKE '%#{params["search"]}%';")
+      json "activities" => activities
+    end
+  end
+
+  get "/activities/:id" do
+    activities = DB.execute("SELECT * FROM activities WHERE id = #{params["id"]};")
+    json "activities" => activities
+  end
+
 end
 
 namespace "/doc" do
