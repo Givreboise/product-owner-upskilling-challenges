@@ -31,20 +31,35 @@ end
 
 namespace "/v2" do
   get "/activities" do
+    construire la base de la query et stocker ca dans une variable
+    constuire un tableau vide de filtres
+    si le user filtre par city, rajouter la condition SQL dans le tabeau de filtres
+    (faire de meme pour category et search)
 
-    if params["city"] != nil
-      activities = DB.execute("SELECT * FROM activities WHERE city = '#{params["city"]}';")
-      json "activities" => activities
+    construire la requete SQL finale
+    2 cas:
+    1. on a pas de filtres
+    2. on a des filtres
 
-    elsif params["category"] != nil
-      activities = DB.execute("SELECT * FROM activities WHERE category = '#{params["category"]}';")
-      json "activities" => activities
+    executer la query
+    retourner le json
 
-    elsif params["search"] != nil
-      activities = DB.execute("SELECT * FROM activities WHERE name LIKE '%#{params["search"]}%';")
-      json "activities" => activities
+    SELECT * FROM activities WHERE city = 'Nantes' AND category = 'Adventure' ..
+
+    # if params["city"] != nil
+    #   activities = DB.execute("SELECT * FROM activities WHERE city = '#{params["city"]}';")
+    # elsif params["category"] != nil
+    #   activities = DB.execute("SELECT * FROM activities WHERE category = '#{params["category"]}';")
+    # elsif params["search"] != nil
+    #   activities = DB.execute("SELECT * FROM activities WHERE name LIKE '%#{params["search"]}%';")
+    # else
+      activities = DB.execute("SELECT * FROM activities ORDER BY name")
     end
+
+    json "activities" => activities
   end
+
+  #no filters provided, only the category provided, only the city provided
 
   get "/activities/:id" do
     activities = DB.execute("SELECT * FROM activities WHERE id = #{params["id"]};")
