@@ -8,7 +8,7 @@ require "sinatra/reloader" if development?
 enable :static
 
 get "/" do
-  url        = "http://localhost:4567/v2/activities"
+  url        = "http://89fc2008.ngrok.io/v2/activities"
   api_params = {}
 
   # filtering
@@ -26,7 +26,7 @@ end
 
 get "/activities/:id" do
   id       = params["id"]
-  url      = "http://localhost:4567/v2/activities/#{id}"
+  url      = "http://89fc2008.ngrok.io/v2/activities/#{id}"
   response = RestClient.get(url)
   payload  = JSON.parse(response.body)
 

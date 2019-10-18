@@ -28,17 +28,17 @@
         <div class="container-details-activity">
           <div class="wrapped-details-activity">
             <div class="city-price-line">
-              <p class="city"><%= @activity["city"]%>
-              <p class="price"><%= @activity["price"]%> €</p>
+              <p class="city"><%= @activity["city"]%></p>
+                 <p class="price"><%= @activity["price"]%> €</p>
             </div>
             <div class="duration-cta">
               <div class="duration-participants">
                 <p><i class="fas fa-hourglass-half"></i>   <%= @activity["duration"] %> min </p>
                 <p><i class="fas fa-users"></i> <%= @activity["participants_count"]%> max </p>
+
             </div>
             <div>
-              <a class="button" href="/activities/<%=@activity["id"]%>"> Discover </a>
-            </div>
+              <button class="button button-like" href="/index">  <i class="fa fa-heart"></i>   <span>Add to wishlist</span></button> </div>
           </div>
         </div>
       </div>
