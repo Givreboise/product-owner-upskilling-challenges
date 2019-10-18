@@ -27,6 +27,7 @@ end
 get "/activities/:id" do
   id       = params["id"]
   url      = "http://89fc2008.ngrok.io/v2/activities/#{id}"
+  favorite = params["site_favorites"]
   response = RestClient.get(url)
   payload  = JSON.parse(response.body)
 
