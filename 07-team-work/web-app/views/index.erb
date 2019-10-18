@@ -3,26 +3,64 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style> @import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand&display=swap'); </style>
+    <script src="https://kit.fontawesome.com/319bcd1342.js" crossorigin="anonymous"></script>
     <title>Team Building - Activities</title>
-    <%= stylesheet "/style.css" %>
+    <%= stylesheet '/style.css' %>
+    <%= stylesheet '/components/banner.css' %>
+    <%= stylesheet '/components/container.css' %>
+    <%= stylesheet '/components/card.css' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Activities</h1>
-    <a href="/?location=Nantes">Nantes</a>
-    <a href="/?location=Paris">Paris</a>
-
-    <% @activities.each do |activity| %>
-      <h2>
-        <a href="/activities/<%= activity["id"] %>"><%= activity["name"] %></a>
-        <small>[<%= activity["category"].upcase %>]</small>
-      </h2>
-      <ul>
-        <li>Located in <%= activity["city"] %></li>
-        <li>Duration of <%= activity["duration"] %> minutes</li>
-        <li>For <%= activity["participants_count"] %> participants</li>
-        <li>Charged <%= activity["price"] %>€</li>
-      </ul>
-    <% end %>
+    <!--Banner-->
+    <div class="banner">
+      <div class="container">
+        <h1>Team Building Activities</h1>
+        <h2>Find your next adventure and onboard your team</h2>
+      </div>
+    </div>
+    <!--Search-->
+        <div>
+          <form method="GET" action="/">
+            <input type="text" name="name">
+            <i class="fa fa-search"></i>
+          </form>
+        </div>
+    <!--Cities filters-->
+    <div class="filters">
+      <a class="button" href="/"> All </a>
+      <a class="button" href="/?location=Nantes"> Nantes </a>
+      <a class="button" href="/?location=Paris"> Paris </a>
+    </div>
+    <p><%= @activities.size %> Activities found</p>
+    <!--Cartes-->
+    <div class="cards-grid">
+      <% @activities.each do |activity| %>
+          <div class="card">
+                <!-- Card header with name and category-->
+                <div class="card-header">
+                  <h1><%= activity["name"] %></h1>
+                  <h2 class="category"> <%= activity["category"] %></h2>
+                </div>
+                <!-- Image -->
+              <div class="img" style="background-image: url('<%= activity["photo_url"]%>')"></div>
+                <!--Location, Price and Button-->
+                  <div class="city-price-line">
+                    <p class="city"><%= activity["city"]%>
+                    <p class="price"><%= activity["price"]%> €</p>
+                  </div>
+                      <div class="duration-cta">
+                        <div class="duration-participants">
+                          <p><i class="fas fa-hourglass-half"></i>   <%= activity["duration"] %> min </p>
+                          <p><i class="fas fa-users"></i> <%= activity["participants_count"]%> max </p>
+                        </div>
+                        <div>
+                      <a class="button" href="/activities/<%=activity["id"]%>"> Discover </a>
+                      </div>
+                      </div>
+          </div>
+      <% end %>
+    </div>
   </body>
 </html>

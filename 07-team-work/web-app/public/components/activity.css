@@ -1,0 +1,143 @@
+.banner-menu {
+  margin: 20px;
+  display: flex;
+}
+
+.fa-arrow-left {
+  size: 4 x;
+}
+
+/* Old below */
+
+.card-activity {
+	background: white;
+	border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-header-activity {
+  padding: 20px 20px 20px 20px;
+  position: relative;
+  background: white;
+	border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  z-index: 2;
+
+}
+
+.container-details-activity {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -70px;
+  border-radius: 20px;
+}
+
+.wrapped-details-activity {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 350px;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* Card Image */
+
+.img-activity {
+  width: 100%x;
+  height: 350px;
+  margin: 0px auto;
+  background-size: cover;
+  background-position : center;
+  position: relative;
+  z-index: 1;
+}
+
+.button-activity-header {
+  background-color: rgb(255, 255, 255); /* Green */
+  color:#08ffc8;
+  border: 1px solid #08ffc8;
+  padding: 14px 31px;
+  font-weight: bold;
+}
+
+
+
+.button-like {
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1rem;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3rem;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+}
+
+.button-like span {
+  margin-left: 0.5rem;
+}
+
+.button-like .fa,
+.button-like span {
+  transition: all ease 0.4s;
+}
+
+.button-like:focus {
+  background-color: transparent;
+}
+
+.button-like:focus .fa,
+.button-like:focus span {
+  color: #8a8a8a;
+}
+
+.button-like:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like:hover .fa,
+.button-like:hover span {
+  color: #cc4b37;
+}
+
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fa,
+.liked span {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fa,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fa,
+.liked:hover span {
+  color: #fefefe;
+}
