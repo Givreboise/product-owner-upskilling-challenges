@@ -13,13 +13,10 @@
     <%= stylesheet '/components/activity.css'%>
   </head>
   <body>
-         <!--Banner-->
-  <div class="banner-menu">
-    <i class="fas fa-arrow-left" href="./"></i>
-  </div>
+         <!--Go back button-->
 
     <div class="card-activity">
-
+    <a class="button-activity-header" href="/"> Go back to all activities </a>
       <!-- Card header with name and category-->
       <div class="card-header-activity">
         <h1><%= @activity["name"] %></h1>
@@ -40,9 +37,20 @@
                 <p><i class="fas fa-users"></i> <%= @activity["participants_count"]%> max </p>
 
             </div>
+            <!--Add wishlist-->
             <div>
-              <button class="button button-like" href="/index">  <i class="fa fa-heart"></i>   <span>Add to wishlist</span></button> </div>
-          </div>
+            <form method="POST" action="/activities/<%= @activity["id"] %>/wishlist">
+         <P class="label purple">Add to wishlist of
+           <input type ="radio" class="hidden" id="Paris" name="site_id" value="1">
+           <label class="btn-grey" for="Paris">Paris</label>
+           <input type ="radio" class="hidden" id="Nantes" name="site_id" value="2">
+           <label class="btn-grey" for="Nantes">Nantes</label>
+         </p>
+         <p><input class="btn label" type="submit" value="Add"></p>
+       </form>
+  </div>
+  <!-- fin de wishlist-->
+  </div>
         </div>
       </div>
     </div>

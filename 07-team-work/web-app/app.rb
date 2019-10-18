@@ -34,3 +34,11 @@ get "/activities/:id" do
 
   erb :show
 end
+
+post "/activities/:activity_id/wishlist" do
+  activity_id = params["activity_id"]
+  site_id = params[:site_id]
+  url = "http://89fc2008.ngrok.io/v2/wishlist"
+  response = RestClient.post(url, {site_id: site_id, activity_id: activity_id})
+  redirect to("/activities/#{activity_id}")
+end

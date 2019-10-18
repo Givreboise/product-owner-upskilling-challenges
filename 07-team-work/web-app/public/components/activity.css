@@ -1,22 +1,44 @@
-.banner-menu {
-  margin: 20px;
-  display: flex;
+/* Banner menu */
+
+.button-activity-header {
+  height: 100px;
 }
 
 .fa-arrow-left {
   size: 4 x;
+  text-align: left;
+}
+
+/* Card Image */
+
+.img-activity {
+  width: 100%x;
+  height: 350px;
+  margin: 0px auto;
+  background-size: cover;
+  background-position : center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Card container */
+
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -70px;
+  border-radius: 20px;
+}
+
+.card-city-wishlist {
+  display: flex;
 }
 
 /* Old below */
 
-.card-activity {
-	background: white;
-	border-radius: 4px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
+
 
 .card-header-activity {
   padding: 20px 20px 20px 20px;
@@ -49,17 +71,7 @@ h1 {
   font-size: 30px;
 }
 
-/* Card Image */
 
-.img-activity {
-  width: 100%x;
-  height: 350px;
-  margin: 0px auto;
-  background-size: cover;
-  background-position : center;
-  position: relative;
-  z-index: 1;
-}
 
 .button-activity-header {
   background-color: rgb(255, 255, 255); /* Green */
